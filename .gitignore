@@ -1,18 +1,38 @@
+# Environment files
 .env
 .env.local
 .env.production
 
+# Go binaries
 backend-payment-gateway-go
 main
-
 *.exe
 *.exe~
 
+# Logs
 *.log
 *.log.*
 
-
+# Dependencies
 vendor/
 
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# OS files
 .DS_Store
 Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
