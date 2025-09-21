@@ -11,9 +11,12 @@ import (
 func SetupRouter(authSvc services.AuthService, userSvc services.UserService, paymentSvc services.PaymentService, cfg *config.Config) *gin.Engine {
 	r := gin.Default()
 
+	entryHandler := handler.NewEntryHandler()
 	authHandler := handler.NewAuthHandler(authSvc)
 	userHandler := handler.NewUserHandler(userSvc)
 	paymentHandler := handler.NewPaymentHandler(paymentSvc, userSvc)
+
+	r.GET("/", entryHandler.GetEntry)
 
 	apiV1 := r.Group("/api/v1")
 	{
