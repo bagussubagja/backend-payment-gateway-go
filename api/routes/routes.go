@@ -17,6 +17,9 @@ func SetupRouter(authSvc services.AuthService, userSvc services.UserService, pay
 	paymentHandler := handler.NewPaymentHandler(paymentSvc, userSvc)
 
 	r.GET("/", entryHandler.GetEntry)
+	r.GET("/health", func(c *gin.Context) {
+		c.JSON(200, gin.H{"status": "ok"})
+	})
 
 	apiV1 := r.Group("/api/v1")
 	{

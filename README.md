@@ -61,7 +61,7 @@ This is a simple backend project functioning as a payment gateway, integrated wi
 
 Make sure the following variables are set in your `.env` file:
 
-- `SERVER_PORT`: App server port (e.g., `8080`)
+- `PORT`: App server port (e.g., `8080`)
 - `DB_HOST`: PostgreSQL host (e.g., `localhost`)
 - `DB_PORT`: PostgreSQL port (e.g., `5432`)
 - `DB_USER`: PostgreSQL username (e.g., `postgres`)

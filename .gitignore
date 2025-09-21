@@ -1,6 +1,9 @@
 .env
+.env.local
+.env.production
 
 backend-payment-gateway-go
+main
 
 *.exe
 *.exe~

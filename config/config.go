@@ -9,7 +9,7 @@ import (
 )
 
 type Config struct {
-	ServerPort          string        `envconfig:"SERVER_PORT" default:"8080"`
+	ServerPort          string        `envconfig:"PORT" default:"8080"`
 	DBHost              string        `envconfig:"DB_HOST" required:"true"`
 	DBPort              string        `envconfig:"DB_PORT" required:"true"`
 	DBUser              string        `envconfig:"DB_USER" required:"true"`
